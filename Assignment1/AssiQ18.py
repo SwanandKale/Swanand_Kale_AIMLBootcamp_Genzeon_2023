@@ -35,3 +35,28 @@ for i in range(len(matrix1)):
 
 for row in result:
     print(row)
+
+print("===============================")
+
+import pickle
+myl=['a','b']
+
+f3=open("f3.txt","wb")
+pickle.dump(myl,f3)
+f3.close()
+
+#unpickle
+pickle_off=open("f3.txt","rb")
+e=pickle.load(pickle_off)
+print(e)
+
+#regular expression
+print("==============regular expression===================")
+import re
+pattern=r"COOKIE"
+sequence="cookie"
+
+if re.match(pattern,sequence):
+    print("Matches")
+else:
+    print("Dosent")
